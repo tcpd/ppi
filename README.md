@@ -1,2 +1,2 @@
-# ipp
-repository for consolidated meta data on indian political parties
+# PPI
+Political Parties of India dataset is a repository for consolidated data on indian political parties
