@@ -94,7 +94,7 @@ all.party.abbs = left_join(all.party.names,party.abbs,by=c("Party_ID"= "ID"))
 cols = c("Assembly","State_Name","Party_Name","Party_Type","Party_ID","Frequent_Abbreviation","Last_Abbreviation","Abbreviations","Start_Year","Last_Year","No_Assemblies_Contested","Assemblies_Contested","Candidates_Contested","Candidates_Represented","Females_Contested","Females_Represented","SC_Seats_Contested","SC_Seats_Represented","ST_Seats_Contested","ST_Seats_Represented","BiPoll_Contested")
 cols[which(!cols %in% names(all.party.abbs))]
 all.party.meta = subset(all.party.abbs,select= cols)
-fwrite(all.party.meta,"../all_india_parties_meta.csv",na="")
+fwrite(all.party.meta,"../TCPD-PPI_1962_2021.csv",na="")
 
 idx = which((all.party.meta$Party_Name == "NA's" | all.party.meta$Party_Name == "XXX") & all.party.meta$BiPoll_Contested < all.party.meta$Candidates_Contested)
 print(all.party.meta[idx,])
